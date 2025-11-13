@@ -1,0 +1,8 @@
+
+{
+  "name": "AI Tutor Chatbot - Kaelo",
+  "description": "A multi-modal AI Tutor chatbot powered by the Gemini API, featuring text, image, and audio capabilities.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
