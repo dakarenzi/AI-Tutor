@@ -8,22 +8,21 @@ account_id = "0ff4d6691280dd626d9acaa47be46473"
 [ai]
 binding = "AI"
 
-# KV namespaces - Create these first with: wrangler kv namespace create SESSION_KV
-# Then update the IDs below with the actual IDs from the create commands
+# KV namespaces (using your real IDs)
 [[kv_namespaces]]
 binding = "SESSION_KV"
-id = "your-session-kv-namespace-id"
-preview_id = "your-session-kv-preview-id"
+id = "6325b43905bb4638ab3ac3a2723de489"
+preview_id = "6325b43905bb4638ab3ac3a2723de489"
 
 [[kv_namespaces]]
 binding = "PROGRESS_KV"
-id = "your-progress-kv-namespace-id"
-preview_id = "your-progress-kv-preview-id"
+id = "a091e73588b243f9bc099fade76c33e1"
+preview_id = "a091e73588b243f9bc099fade76c33e1"
 
 [[kv_namespaces]]
 binding = "ANALYTICS_KV"
-id = "your-analytics-kv-namespace-id"
-preview_id = "your-analytics-kv-preview-id"
+id = "29d56b1817b8489aaf69ca789f48d38d"
+preview_id = "29d56b1817b8489aaf69ca789f48d38d"
 
 # Durable Object
 [[durable_objects.bindings]]
@@ -31,8 +30,7 @@ name = "SESSION_MANAGER"
 class_name = "SessionManager"
 script_name = "ai-tutor"
 
-# D1 database - Create first with: wrangler d1 create analytics-db
-# Then update the IDs below with the actual IDs from the create command
+# D1 database (you must replace with real values later)
 [[d1_databases]]
 binding = "ANALYTICS_DB"
 database_name = "analytics-db"
@@ -48,6 +46,3 @@ ENVIRONMENT = "production"
 
 [env.production.vars]
 ENVIRONMENT = "production"
-
-
-
