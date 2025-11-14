@@ -31,11 +31,11 @@ class_name = "SessionManager"
 script_name = "ai-tutor"
 
 # D1 database (you must replace with real values later)
+# D1 database
 [[d1_databases]]
 binding = "ANALYTICS_DB"
 database_name = "analytics-db"
-database_id = "your-d1-database-id"
-preview_database_id = "your-d1-preview-database-id"
+database_id = "22d5e38d-09bc-46ad-9613-499612bb0b3c"
 
 # Environment variables
 [vars]
