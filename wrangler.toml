@@ -1,13 +1,15 @@
-name = "ai-tutor-backend"
+name = "ai-tutor"
 main = "src/index.ts"
 compatibility_date = "2024-01-01"
 compatibility_flags = ["nodejs_compat"]
+account_id = "0ff4d6691280dd626d9acaa47be46473"
 
 # Workers AI binding
 [ai]
 binding = "AI"
 
-# KV namespaces
+# KV namespaces - Create these first with: wrangler kv namespace create SESSION_KV
+# Then update the IDs below with the actual IDs from the create commands
 [[kv_namespaces]]
 binding = "SESSION_KV"
 id = "your-session-kv-namespace-id"
@@ -27,9 +29,10 @@ preview_id = "your-analytics-kv-preview-id"
 [[durable_objects.bindings]]
 name = "SESSION_MANAGER"
 class_name = "SessionManager"
-script_name = "ai-tutor-backend"
+script_name = "ai-tutor"
 
-# D1 database
+# D1 database - Create first with: wrangler d1 create analytics-db
+# Then update the IDs below with the actual IDs from the create command
 [[d1_databases]]
 binding = "ANALYTICS_DB"
 database_name = "analytics-db"

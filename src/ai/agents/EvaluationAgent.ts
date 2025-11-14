@@ -16,7 +16,8 @@ export class EvaluationAgent {
   }
 
   async run(request: AgentRequest): Promise<AgentResponse> {
-    const { exercise, userAnswer, studentLevel } = request.input;
+    const { exercise, userAnswer, studentProfile } = request.input;
+    const studentLevel = studentProfile?.level;
 
     if (!exercise || !userAnswer) {
       return {

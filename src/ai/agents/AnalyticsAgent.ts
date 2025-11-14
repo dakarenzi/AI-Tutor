@@ -19,10 +19,10 @@ export class AnalyticsAgent {
       output: {
         message: this.formatAnalysis(analysis),
         success: true,
-        analysis,
       },
       metadata: {
         timestamp: Date.now(),
+        analysis,
       },
     };
   }

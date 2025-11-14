@@ -16,7 +16,8 @@ export class PlannerAgent {
   }
 
   async run(request: AgentRequest): Promise<AgentResponse> {
-    const { studentProfile, planType } = request.input;
+    const { studentProfile } = request.input;
+    const planType = (request.metadata as any)?.planType || 'weekly';
 
     const systemInstruction = `${getSystemInstruction()}
 

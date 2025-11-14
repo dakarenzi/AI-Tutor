@@ -40,13 +40,12 @@ export interface AgentRequest {
     userAnswer?: string;
     performanceHistory?: any[];
     currentLevel?: string;
-    studentProfile?: any;
+    studentProfile?: StudentProfile;
     trigger?: string;
     studentName?: string;
     
     // Context
     conversationHistory?: Message[];
-    studentProfile?: StudentProfile;
   };
   metadata?: {
     timestamp?: number;

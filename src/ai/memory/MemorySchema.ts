@@ -4,7 +4,7 @@
  * Memory data structures
  */
 
-import type { Message } from '../schemas/AgentRequest';
+import type { Message, StudentProfile } from '../schemas/AgentRequest';
 import type { DifficultyLevel } from '../schemas/ExerciseSchema';
 
 export interface MemoryData {
@@ -23,6 +23,7 @@ export interface MemoryData {
   learningStyle?: string;
   goals?: string[];
   examDate?: string;
+  studentProfile?: StudentProfile;
   
   // Metadata
   lastUpdated: number;
